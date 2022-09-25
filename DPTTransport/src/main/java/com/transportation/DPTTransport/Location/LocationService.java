@@ -9,6 +9,9 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class LocationService {
+
+    private final LocationRepository locationRepository;
+
     public List<Object> getTopZones(String order){
         return null;
     }
