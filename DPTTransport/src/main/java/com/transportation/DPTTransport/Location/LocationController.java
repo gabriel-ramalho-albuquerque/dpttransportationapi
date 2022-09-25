@@ -8,5 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "api/v1/location")
 @AllArgsConstructor
 public class LocationController {
-    
+
+    private final LocationService locationService;
 }
