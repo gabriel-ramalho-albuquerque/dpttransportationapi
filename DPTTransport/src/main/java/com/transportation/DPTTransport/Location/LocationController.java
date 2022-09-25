@@ -16,7 +16,7 @@ public class LocationController {
     private final LocationService locationService;
 
     @GetMapping(path = "top-zones")
-    public List<Object> getTopZones(@RequestParam("order") String order){
+    public List<TopZone> getTopZones(@RequestParam("order") String order){
         return locationService.getTopZones(order);
     }
 }
