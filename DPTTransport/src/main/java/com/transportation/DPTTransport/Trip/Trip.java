@@ -4,7 +4,7 @@ import com.transportation.DPTTransport.Location.Location;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
@@ -24,10 +24,10 @@ public class Trip {
     private long vendorId;
 
     @Column(name = "PICKUP_DATETIME")
-    private LocalDateTime pickupDateTime;
+    private LocalDate pickupDateTime;
 
     @Column(name = "DROPOFF_DATETIME")
-    private LocalDateTime dropoffDateTime;
+    private LocalDate dropoffDateTime;
 
     private int passengerCount;
 
