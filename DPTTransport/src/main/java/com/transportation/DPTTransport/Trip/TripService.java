@@ -2,7 +2,7 @@ package com.transportation.DPTTransport.Trip;
 
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class TripService {
     private final TripRepository tripRepository;
 
-    public Page<Trip> getListYellow(PageRequest pageRequest){
-        return tripRepository.findAll(pageRequest);
+    public Page<Trip> getListYellow(Pageable pageable){
+        return tripRepository.findAll(pageable);
     }
 }
