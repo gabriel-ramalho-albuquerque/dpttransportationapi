@@ -12,7 +12,11 @@ public class LocationService {
 
     private final LocationRepository locationRepository;
 
-    public List<Object> getTopZones(String order){
-        return null;
+    public List<TopZone> getTopZones(String order){
+        if (order.equals("pickups")) {
+            return locationRepository.getTopZonesByPickUps(PageRequest.of(0,5));
+        } else{
+            return locationRepository.getTopZonesByDropOffs(PageRequest.of(0,5));
+        }
     }
 }
