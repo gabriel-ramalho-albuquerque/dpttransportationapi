@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigInteger;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -95,7 +94,7 @@ public class LocationControllerTest {
 
         zoneTripsDTOList.add(new ZoneTripsDTO("Alphabet City", formatter.parse("2018-01-01"), BigInteger.valueOf(61), BigInteger.valueOf(70)));
 
-        when(locationService.getZoneTrips(Long.valueOf(4), LocalDate.parse(("2018-01-01")))).thenReturn(zoneTripsDTOList);
+        when(locationService.getZoneTrips(Long.valueOf(4), LocalDate.parse("2018-01-01"))).thenReturn(zoneTripsDTOList);
 
         mockMvc.perform(get("/api/v1/location/zone-trips?zone=4&date=2018-01-01")
                         .contentType(MediaType.APPLICATION_JSON))
