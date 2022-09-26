@@ -13,15 +13,15 @@ public class LocationService {
 
     private final LocationRepository locationRepository;
 
-    public List<TopZone> getTopZones(String order){
+    public List<TopZoneDTO> getTopZones(String order){
         if (order.equals("pickups")) {
             return locationRepository.getTopZonesByPickUps(PageRequest.of(0,5));
-        } else{
+        } else {
             return locationRepository.getTopZonesByDropOffs(PageRequest.of(0,5));
         }
     }
 
-    public List<ZoneTrips> getZoneTrips(Long zoneId, LocalDate date){
+    public List<ZoneTripsDTO> getZoneTrips(Long zoneId, LocalDate date){
         return locationRepository.getZoneTrips(zoneId, date);
     }
 }
