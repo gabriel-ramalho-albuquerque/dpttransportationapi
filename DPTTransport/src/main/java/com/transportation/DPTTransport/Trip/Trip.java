@@ -45,6 +45,10 @@ public class Trip {
     @JoinColumn(name = "dropoff_location_id")
     private Location doLocation;
 
+    @ManyToOne
+    @JoinColumn(name = "trip_type_id")
+    private TripType tripType;
+
     @Override
     public String toString() {
         return "Trip{" +
@@ -58,6 +62,7 @@ public class Trip {
                 ", storeAndFwdFlag='" + storeAndFwdFlag + '\'' +
                 ", puLocation=" + puLocation +
                 ", doLocation=" + doLocation +
+                ", tripType=" + tripType +
                 '}';
     }
 }
