@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "5bd60d3a-dcac-4495-9293-1750ab312617",
+		"name": "dpttransportationapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6124144"
+	},
+	"item": [
+		{
+			"name": "top-zones",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "zone-trips",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "list-yellow",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
