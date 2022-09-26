@@ -10,16 +10,6 @@ import java.time.LocalDate;
 
 @Repository
 public interface TripRepository extends JpaRepository<Trip, Long> {
-    Page<Trip> findById(Long id, Pageable pageable);
-
-    Page<Trip> findByPickupDateTime(LocalDate pickupDate, Pageable pageable);
-
-    Page<Trip> findByDropoffDateTime(LocalDate dropoffDate, Pageable pageable);
-
-    Page<Trip> findByPuLocationId(Long puLocationId, Pageable pageable);
-
-    Page<Trip> findByDoLocationId(Long doLocationId, Pageable pageable);
-
-    @Query("select t from Trip t where t.id = :id and (:pickupDate is null or t.pickupDateTime = :pickupDate) and (:dropoffDate is null or t.dropoffDateTime = :dropoffDate)")
-    Page<Trip> findByMultipleFilters(Long id, LocalDate pickupDate, LocalDate dropoffDate, Pageable pageable);
+    @Query("select t from Trip t where t.tripType = 1 and (:id is null or t.id = :id) and (:pickupDate is null or t.pickupDateTime = :pickupDate) and (:dropoffDate is null or t.dropoffDateTime = :dropoffDate)")
+    Page<Trip> getYellowListByMultipleFilters(Long id, LocalDate pickupDate, LocalDate dropoffDate, Pageable pageable);
 }

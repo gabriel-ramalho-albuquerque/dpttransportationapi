@@ -21,9 +21,7 @@ public class TripController {
     public Page<Trip> getListYellow(@RequestParam(name = "id", required = false) Long id,
                                     @RequestParam(name = "pickupDate", required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate pickupDate,
                                     @RequestParam(name = "dropoffDate", required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate dropoffDate,
-                                    @RequestParam(name = "puLocationId", required = false) Long puLocationId,
-                                    @RequestParam(name = "doLocationId", required = false) Long doLocationId,
                                     Pageable pageable){
-        return tripService.getListYellow(id, pickupDate, dropoffDate, puLocationId, doLocationId, pageable);
+        return tripService.getListYellow(id, pickupDate, dropoffDate, pageable);
     }
 }
