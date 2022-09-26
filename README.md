@@ -12,6 +12,10 @@ The database tables and data was created by the Spring Batch job.
 
 Has also a Postman collection in the "postman" folder.
 
+### Database relationships diagram
+
+![Alt text](https://raw.githubusercontent.com/gabriel-ramalho-albuquerque/dpttransportationapi/main/docs/database_relationship_diagrams.PNG?sanitize=true)
+
 ### API docs
 
 http://localhost:8181/v3/api-docs
