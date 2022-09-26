@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class TripService {
     private final TripRepository tripRepository;
 
-    public Page<Trip> getListYellow(Long id, LocalDate pickupDate, LocalDate dropoffDate, Long puLocationId, Long doLocationId, Pageable pageable){
-        return tripRepository.findByMultipleFilters(id, pickupDate, dropoffDate, pageable);
+    public Page<Trip> getListYellow(Long id, LocalDate pickupDate, LocalDate dropoffDate, Pageable pageable){
+        return tripRepository.getYellowListByMultipleFilters(id, pickupDate, dropoffDate, pageable);
     }
 }
